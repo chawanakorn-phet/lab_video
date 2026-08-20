@@ -1,0 +1,50 @@
+version: 2
+
+sources:
+  - name: northwind # The name of the source, used to reference this source in dbt models
+    schema: main # The schema(dataset name) to which the source belongs. main is the default schema for DuckDB
+    description: "Raw flat files queried directly from the local workspace folder"
+    meta: # Additional metadata for the source
+      # {name} is a placeholder that automatically injects the table names listed below
+      external_location: 'datasets/{name}.csv'
+    tables:
+      - name: customer
+        description: "customer data from the Northwind dataset"
+      - name: employees
+        description: "employees data from the Northwind dataset"
+      - name: employee_privileges
+        description: "employee_privileges data from the Northwind dataset"
+      - name: inventory_transactions
+        description: "inventory_transactions data from the Northwind dataset"
+      - name: inventory_transaction_types
+        description: "inventory_transaction_types data from the Northwind dataset"
+      - name: invoices
+        description: "invoices data from the Northwind dataset"
+      - name: orders
+        description: "orders data from the Northwind dataset"
+      - name: orders_status
+        description: "orders_status data from the Northwind dataset"
+      - name: orders_tax_status
+        description: "orders_tax_status data from the Northwind dataset"
+      - name: order_details
+        description: "order_details data from the Northwind dataset"
+      - name: order_details_status
+        description: "order_details_status data from the Northwind dataset"
+      - name: privileges
+        description: "privileges data from the Northwind dataset"
+      - name: products
+        description: "products data from the Northwind dataset"
+      - name: purchase_orders
+        description: "purchase_orders data from the Northwind dataset"
+      - name: purchase_order_details
+        description: "purchase_order_details data from the Northwind dataset"
+      - name: purchase_order_status
+        description: "purchase_order_status data from the Northwind dataset"
+      - name: sales_reports
+        description: "sales_reports data from the Northwind dataset"
+      - name: shippers
+        description: "shippers data from the Northwind dataset"
+      - name: strings
+        description: "strings data from the Northwind dataset"
+      - name: suppliers
+        description: "suppliers data from the Northwind dataset"
