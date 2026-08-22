@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 # Connect to database
-DB_PATH = "northwind_dw_duckdb2/dev.duckdb"
+DB_PATH = "northwind/dev.duckdb"
 
 @st.cache_resource
 def get_connection():
