@@ -2,7 +2,7 @@ import duckdb
 import pandas as pd
 
 # Connect to the DuckDB database
-conn = duckdb.connect('northwind_dw_duckdb2/dev.duckdb')
+conn = duckdb.connect('northwind/dev.duckdb')
 
 # Get all table names
 tables = conn.execute("SELECT table_name FROM information_schema.tables WHERE table_schema = 'main'").fetchall()

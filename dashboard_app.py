@@ -14,7 +14,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 def find_duckdb_path():
     candidates = [
         os.getenv("DUCKDB_PATH"),
-        str(PROJECT_ROOT / "northwind_dw_duckdb2" / "dev.duckdb"),
+        str(PROJECT_ROOT / "northwind" / "dev.duckdb"),
         str(PROJECT_ROOT / "northwindDW_duckdb" / "target" / "duckdb" / "northwind.duckdb"),
         str(PROJECT_ROOT / "northwindDW_duckdb" / "northwind.duckdb"),
         str(PROJECT_ROOT / "northwind.duckdb"),
